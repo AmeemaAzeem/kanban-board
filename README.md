@@ -17,6 +17,3 @@ A **dynamic, interactive Kanban board** built with **HTML, CSS, and JavaScript**
 * **Storage:** Browser LocalStorage
 * **Design Inspiration:** Notion Light Mode
 
-
-
-**Made by [Your Name] – Front-End Web Developer / Internship Project**
