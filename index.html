@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kanban Board - Notion Light</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="board-container">
+    <h1>My Kanban Board</h1>
+    <div class="board">
+      <div class="column" data-status="todo">
+        <h2>To Do</h2>
+        <div class="task-list" id="todo"></div>
+        <button class="add-task-btn">+ Add Task</button>
+      </div>
+      <div class="column" data-status="in-progress">
+        <h2>In Progress</h2>
+        <div class="task-list" id="in-progress"></div>
+        <button class="add-task-btn">+ Add Task</button>
+      </div>
+      <div class="column" data-status="done">
+        <h2>Done</h2>
+        <div class="task-list" id="done"></div>
+        <button class="add-task-btn">+ Add Task</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for Add/Edit Task -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <input type="text" id="modal-input" placeholder="Enter task name">
+      <select id="modal-priority">
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+      </select>
+      <button id="modal-save">Save</button>
+      <button id="modal-cancel">Cancel</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

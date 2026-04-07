@@ -1,0 +1,177 @@
+/* Vibrant Kanban Board with Dimension and Shadow */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #F89880; /* Page background */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #37352F;
+  margin-bottom: 20px;
+}
+
+.board-container {
+  width: 95%;
+  max-width: 1200px;
+}
+
+.board {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.column {
+  background-color: #FF8348; /* Column background */
+  flex: 1;
+  padding: 15px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  min-height: 500px;
+  box-shadow: 0 6px 15px #FDAD66; /* Dimensional shadow */
+  transition: transform 0.3s ease;
+}
+
+.column:hover {
+  transform: translateY(-3px);
+}
+
+.column h2 {
+  color: #37352F;
+  text-align: center;
+}
+
+.task-list {
+  flex-grow: 1;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.add-task-btn {
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #FDAD66;
+  color: #37352F;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.add-task-btn:hover {
+  background-color: #FF9E75;
+}
+
+.task-card {
+  background-color: #FF8348; /* Task card background */
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 4px 10px #FDAD66; /* Task shadow */
+  cursor: grab;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.task-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 20px #FDAD66;
+}
+
+.task-text {
+  flex-grow: 1;
+  margin-right: 10px;
+  color: #37352F;
+  display: flex;
+  align-items: center;
+}
+
+.task-buttons button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-left: 5px;
+  font-weight: bold;
+  color: #111111;
+  transition: 0.2s ease;
+}
+
+.task-buttons button:hover {
+  color: #333333;
+}
+
+/* Priority tags */
+.priority {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.priority.Low { background-color: #448361; }
+.priority.Medium { background-color: #F4C430; }
+.priority.High { background-color: #D44C47; }
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top:0; left:0; right:0; bottom:0;
+  background: rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.modal-content {
+  background: #FF8348;
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  box-shadow: 0 6px 15px #FDAD66;
+}
+
+.modal input, .modal select {
+  flex-grow: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #FDAD66;
+}
+
+.modal button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: #FDAD66;
+  color: #37352F;
+  font-weight: bold;
+}
+
+.modal button:hover {
+  background-color: #FF7f50;
+}
+
+.hidden { display: none; }
+
+/* Responsive */
+@media(max-width: 900px){
+  .board {
+    flex-direction: column;
+  }
+}
