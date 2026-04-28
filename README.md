@@ -1,6 +1,8 @@
 # Kanban Board Web Application
 
 A **dynamic, interactive Kanban board** built with **HTML, CSS, and JavaScript**, inspired by **Notion Light Mode** for a clean, modern, and vibrant interface. This project demonstrates front-end development skills, including **DOM manipulation, drag-and-drop functionality, modal inputs, responsive design, and local storage persistence**.
+deploy project through railway
+https://kanban-board-production-bc14.up.railway.app/
 
 ## Features
 
